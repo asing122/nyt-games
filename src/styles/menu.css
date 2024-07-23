@@ -1,0 +1,17 @@
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  padding-top: 20px;
+  width: 70%;
+  gap: 16px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}

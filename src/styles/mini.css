@@ -1,0 +1,152 @@
+.mini-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.mini-board {
+  width: 30rem;
+  height: 30rem;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.mini-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: calc(100% / 7);
+  box-sizing: border-box;
+}
+
+.mini-col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  width: calc(100% / 7);
+  box-sizing: border-box;
+}
+
+.mini-row .cell-container {
+  width: calc(100% / 7);
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid black;
+}
+
+.mini-col .cell-container {
+  height: calc(100% / 7);
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid black;
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: none;
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0;
+  caret-color: transparent;
+  cursor: default;
+}
+
+.cell-container:focus-within,
+.cell:focus {
+  background-color: #ffda00;
+  outline: none;
+}
+
+.mini-row:focus-within .cell:not(.cell:focus),
+.mini-row:focus-within .cell-container:not(.cell-container:focus-within) {
+  background-color: #a7d8ff;
+}
+
+.mini-col:focus-within .cell:not(.cell:focus),
+.mini-col:focus-within .cell-container:not(.cell-container:focus-within) {
+  background-color: #a7d8ff;
+}
+
+.cell::selection {
+  background-color: transparent;
+}
+
+.clue-number {
+  position: fixed;
+  display: flex;
+  justify-self: flex-start;
+  margin: 0px;
+  padding: 5px;
+  user-select: none;
+}
+
+.clue {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.across {
+  padding-right: 50px;
+}
+
+.down {
+  padding-left: 50px;
+}
+
+.clues {
+  width: 224px;
+  font-size: 14px;
+}
+
+.clues-title {
+  border-bottom: 1px solid #e6e6e6;
+  font-weight: bold;
+  line-height: 2;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.clue {
+  margin: 0;
+  height: fit-content;
+  padding: 0;
+  border-left: 10px solid rgba(0, 0, 0, 0);
+  cursor: pointer;
+  width: 100%;
+  padding: 5px 1px;
+}
+
+.clue-card-number {
+  line-height: 1.4;
+  user-select: none;
+  text-align: right;
+  width: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.clue-text {
+  margin: 0 0 0 10px;
+  line-height: 1.4;
+  user-select: none;
+  width: 200px;
+}
+
+.clue.select {
+  background-color: #a7d8ff;
+}
